@@ -56,7 +56,7 @@ establecimientosCtrl.putEstablecimiento = async (req, res) => {
 
 establecimientosCtrl.deleteEstablecimiento = async (req, res) => {
     const id = req.params.id;
-    await Establecimiento.findOneAndDelete(id);
+    await Establecimiento.findByIdAndDelete(id);
     res.send('establecimiento eliminado');
 }
 
